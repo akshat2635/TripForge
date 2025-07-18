@@ -1,0 +1,275 @@
+/* TripForge - AI Travel Planner Styles */
+
+/* Hide streamlit elements */
+/* Uncomment these lines if you want to hide Streamlit UI elements */
+/*
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+.stDeployButton {visibility: hidden;}
+*/
+
+/* Hide the streamlit button used for navbar functionality - but show sidebar buttons */
+.main [data-testid="stButton"] {
+  display: none !important;
+}
+
+/* Show sidebar buttons */
+.css-1d391kg [data-testid="stButton"] {
+  display: block !important;
+}
+
+/* Sidebar styling */
+.css-1d391kg {
+  background-color: #1e1e1e;
+  border-right: 1px solid #333;
+}
+
+.css-1d391kg .css-1v0mbdj {
+  color: white;
+}
+
+/* Sidebar button styling */
+.css-1d391kg [data-testid="stButton"] > button {
+  width: 100%;
+  background-color: #1f77b4;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.css-1d391kg [data-testid="stButton"] > button:hover {
+  background-color: #1565c0;
+}
+
+/* Sidebar download button styling */
+.css-1d391kg [data-testid="stDownloadButton"] > button {
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.css-1d391kg [data-testid="stDownloadButton"] > button:hover {
+  background-color: #218838;
+}
+
+/* Main app background and width */
+/* Add any main app styles here if needed */
+
+/* User message bubble (right side) */
+.user-message {
+  background-color: #2b2b2b;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 18px;
+  text-align: left;
+  display: inline-block;
+  max-width: 67%;
+  width: fit-content;
+}
+
+/* Assistant message (left side, no bubble) */
+.assistant-message {
+  margin: 1.5rem 0;
+  margin-right: 20%;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Input box styling */
+.stChatInput {
+  padding: 1rem;
+  margin-top: 1rem;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stChatInput > div {
+  padding: 1rem;
+  max-width: 100%;
+}
+
+.stChatInput input {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Chat header styling - replaces fixed navbar */
+.chat-header {
+  position: sticky;
+  top: 0;
+  background-color: #0e1117;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-bottom: 1px solid #333;
+  margin-bottom: 1rem;
+  z-index: 100;
+}
+
+.tripforge-logo {
+  color: #1f77b4;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(31, 119, 180, 0.3);
+}
+
+.tripforge-subtitle {
+  color: #888;
+  font-size: 1rem;
+  margin: 0.5rem 0 0 0;
+  font-weight: 400;
+}
+
+/* Adjust main content styling */
+.main {
+  color: white;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1rem 2rem 0 2rem;
+}
+
+.block-container {
+  max-width: 1080px;
+  padding: 1rem 2rem;
+  margin-top: 0;
+}
+
+/* Chat message containers */
+.user-message-container {
+  text-align: right;
+  margin: 1rem 0;
+}
+
+.assistant-message-container {
+  text-align: left;
+  margin: 1rem 0;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .user-message {
+    max-width: 85%;
+  }
+
+  .assistant-message {
+    margin-right: 10%;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+
+  .block-container {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f77b4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1565c0;
+}
+
+/* Custom styling for code blocks in assistant messages */
+.assistant-message pre {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  border-left: 4px solid #1f77b4;
+}
+
+.assistant-message code {
+  background-color: #1e1e1e;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: "Courier New", monospace;
+}
+
+/* Styling for lists in assistant messages */
+.assistant-message ul,
+.assistant-message ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.assistant-message li {
+  margin: 0.5rem 0;
+}
+
+/* Custom styling for tables in assistant messages */
+.assistant-message table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.assistant-message th,
+.assistant-message td {
+  border: 1px solid #333;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.assistant-message th {
+  background-color: #1f77b4;
+  color: white;
+}
+
+.assistant-message tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive chat header adjustments */
+@media (max-width: 768px) {
+  .chat-header {
+    padding: 1rem 0;
+  }
+
+  .tripforge-logo {
+    font-size: 2rem;
+  }
+
+  .tripforge-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* Additional responsive improvements */
+@media (max-width: 480px) {
+  .tripforge-logo {
+    font-size: 1.75rem;
+  }
+
+  .tripforge-subtitle {
+    font-size: 0.8rem;
+  }
+}
