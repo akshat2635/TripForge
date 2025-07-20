@@ -55,6 +55,7 @@ def create_itinerary_graph(llm) -> StateGraph:
         try: 
             if hasattr(response, 'tool_calls') and response.tool_calls:
                 state['next_action'] = "tool_node"
+                print(f"Tool calls detected: {response.tool_calls}")
             else:
                 state['next_action'] = 'user_input'
                 state['itinerary'] = response.content

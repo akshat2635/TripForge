@@ -68,48 +68,48 @@ def create_sidebar():
         st.markdown("---")
         
         # Download Itinerary Button
-        if st.button("📄 Download Itinerary", use_container_width=True, help="Download your travel itinerary"):
-            itinerary_content = generate_itinerary_file()
-            if itinerary_content:
-                st.download_button(
-                    label="📥 Download Itinerary",
-                    data=itinerary_content,
-                    file_name=f"tripforge_itinerary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt",
-                    mime="text/plain",
-                    use_container_width=True
-                )
-            else:
-                st.warning("No itinerary available. Please complete your trip planning first.")
+        itinerary_content = generate_itinerary_file()
+        if itinerary_content:
+            st.download_button(
+                label="📄📥 Download Itinerary",
+                data=itinerary_content,
+                file_name=f"tripforge_itinerary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt",
+                mime="text/plain",
+                use_container_width=True,
+                help="Download your travel itinerary"
+            )
+        else:
+            st.button("📄📥 Download Itinerary", use_container_width=True, disabled=True, help="No itinerary available. Please complete your trip planning first.")
         
         # Download Preferences Button
-        if st.button("📋 Download Preferences", use_container_width=True, help="Download your travel preferences"):
-            preferences_content = generate_preferences_file()
-            if preferences_content:
-                st.download_button(
-                    label="📥 Download Preferences",
-                    data=preferences_content,
-                    file_name=f"tripforge_preferences_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
-                    mime="application/json",
-                    use_container_width=True
-                )
-            else:
-                st.warning("No preferences available. Please start planning your trip first.")
+        preferences_content = generate_preferences_file()
+        if preferences_content:
+            st.download_button(
+                label="📋📥 Download Preferences",
+                data=preferences_content,
+                file_name=f"tripforge_preferences_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+                mime="application/json",
+                use_container_width=True,
+                help="Download your travel preferences"
+            )
+        else:
+            st.button("📋📥 Download Preferences", use_container_width=True, disabled=True, help="No preferences available. Please start planning your trip first.")
         
         st.markdown("---")
         
         # Export Chat History
-        if st.button("💬 Export Chat", use_container_width=True, help="Export your conversation"):
-            chat_content = generate_chat_export()
-            if chat_content:
-                st.download_button(
-                    label="📥 Download Chat",
-                    data=chat_content,
-                    file_name=f"tripforge_chat_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt",
-                    mime="text/plain",
-                    use_container_width=True
-                )
-            else:
-                st.warning("No chat history to export.")
+        chat_content = generate_chat_export()
+        if chat_content:
+            st.download_button(
+                label="💬📥 Export Chat",
+                data=chat_content,
+                file_name=f"tripforge_chat_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt",
+                mime="text/plain",
+                use_container_width=True,
+                help="Export your conversation"
+            )
+        else:
+            st.button("💬📥 Export Chat", use_container_width=True, disabled=True, help="No chat history to export.")
 
 def generate_itinerary_file():
     """Generate downloadable itinerary file in formatted text"""
@@ -279,4 +279,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

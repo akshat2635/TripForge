@@ -1,24 +1,19 @@
 # TripForge - AI Travel Planner Dependencies
 
 # Core framework
-streamlit>=1.28.0
+streamlit
 
 # AI and LLM
-langchain>=0.1.0
-langchain-google-genai>=1.0.0
-langgraph>=0.1.0
-langchain-core>=0.1.0
+langchain
+langchain-google-genai
+langgraph
+langchain-core
 
 # API integration
-google-search-results>=2.4.2
+google-search-results
 
 # Environment management
-python-dotenv>=1.0.0
+python-dotenv
 
 # Data handling
-typing-extensions>=4.8.0
-
-# Optional: Development dependencies
-# pytest>=7.4.0
-# black>=23.0.0
-# flake8>=6.0.0
+typing-extensions
