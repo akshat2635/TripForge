@@ -17,6 +17,15 @@
 ## 🌐 Live Demo
 
 **🚀 Try TripForge Now:** [https://tripforge.streamlit.app/](https://tripforge.streamlit.app/)
+[//]: # (Streamlit Website Demo)
+
+---
+
+### 🖼️ Streamlit Website Demo
+
+Below is a demo screenshot of the TripForge Streamlit website:
+
+![Streamlit Website Demo](image.png)
 
 TripForge is a sophisticated AI-powered travel planning application built with Streamlit and LangGraph. It leverages Google Gemini's advanced language model to understand your travel preferences through natural conversation and creates detailed, actionable travel itineraries with real-time flight and hotel data.
 
